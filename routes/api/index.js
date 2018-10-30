@@ -56,8 +56,8 @@ router.post('/signUp', function (req, res, next) {
 router.get("/checkUser", function(req, res, next) {
   res.json(req.session.user);
 });
-router.post("/setSession", function(req, res, next){
-  req.session.user = {};
+router.post("/clearSession", function(req, res, next){
+  req.session.user = undefined;
   res.json(req.session.user);
 })
 // //checkLogin
